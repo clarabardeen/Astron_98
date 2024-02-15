@@ -1,0 +1,108 @@
+# power of a number
+x = 4 
+y = 2
+z = pow (x, y)
+print (z) 
+
+# minimum and maximum 
+mylist = [1, 2, 3, 4, 5, 6, 7] 
+res1 = min(mylist), max(mylist) 
+print ("the min and max of index 1 : " + str (res1))
+
+# check leap year, conditional
+if (2024 % 4 == 0): 
+    print ("2024 is a leap year")
+else: 
+    print ("2024 is not a leap year")
+
+# calculate BMI 
+weight = 60.33
+height = 1.7272
+BMI = weight / height**2
+print (BMI)
+
+# rotating digits (don't get this one)
+def numberofdigits (N): 
+    digit = 0 
+    while (N > 0): 
+        digit += 1 
+        N //= 10 
+    return digit 
+def rotate_digits (N, K): 
+    X = numberofdigits (N) 
+    K = ((K % X) + X) % X 
+    rightno = N // pow(10, X - K) 
+    N = N % pow(10, X - K) 
+    rightdigit = numberofdigits(rightno) 
+    N = N * pow(10, rightdigit) + rightno 
+    print(N) 
+if numberofdigits == 'rotate_digits': 
+    N = 12345 
+    K = 1
+    rotate_digits(N, K) 
+print("when rotating digits: ", rotate_digits(N, K))
+
+# i do not think that this is right either 
+# i think i am missing a final command? 
+# says that N is not defined 
+    
+
+
+
+
+
+
+# minimum and maximum but with loops (how to do while loop?)
+def find_min(myList): 
+    minval = myList[0] 
+    for i in range (len(myList)): 
+        if myList[i] <= minval: 
+            minval = myList[i]
+    return minval 
+list = [1, 2, 3, 4, 5, 6, 7]
+print ("minimum value of my list is: ", find_min(list))
+
+def find_max(myList): 
+    maxval = myList[0] 
+    for i in range (len(myList)): 
+        if myList[i] >= maxval: 
+            maxval = myList[i] 
+    return maxval 
+list = [1, 2, 3, 4, 5, 6, 7]
+print ("maximum value of this list is: ", find_max(list))
+
+lst = [1, 2, 3, 4, 5, 6, 7]
+min = lst[0]
+i=0
+while(i<len(lst)):
+    if lst[i] < min:
+        min = lst[i]
+    i+=1
+print(min)
+
+lst = [1, 2, 3, 4, 5, 6, 7]
+x = 0 
+max = lst[x] 
+while x < len(lst): 
+    if lst[x] > max: 
+        max = lst[x] 
+    x = x+1 
+print(max) 
+
+# vowels 
+mystring = 'how are you?'
+vowels = ["a", "e", "i", "o", "u"]
+count = 0 
+for character in mystring: 
+    if character in vowels: 
+        count += 1 
+print ("number of vowels in my string is: ", count) 
+
+# digital root 
+def getdr(n): 
+    sum = 0 
+    for digit in str(n): 
+        sum += int(digit) 
+    return sum 
+n = 12345 
+print(getdr(n))
